@@ -1,13 +1,10 @@
 {
-	"id": "nodebb-plugin-quickstart",
-	"url": "https://github.com/NodeBB/nodebb-plugin-quickstart",
+	"id": "nodebb-plugin-random-topics",
+	"url": "https://github.com/NodeBB/nodebb-plugin-random-topics",
 	"library": "./library.js",
 	"hooks": [
 		{
 			"hook": "static:app.load", "method": "init"
-		},
-		{
-			"hook": "static:api.routes", "method": "addRoutes"
 		},
 		{
 			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
@@ -16,17 +13,15 @@
 	"staticDirs": {
 		"static": "./static"
 	},
-	"less": [
-		"static/style.less"
-	],
 	"scripts": [
-		"static/lib/main.js"
+
 	],
 	"acpScripts": [
 		"static/lib/admin.js"
 	],
 	"modules": {
-		"../client/quickstart.js": "./static/lib/quickstart.js"
+		"../client/random-topics.js": "./static/lib/random-topics.js"
 	},
-	"templates": "static/templates"
+	"templates": "static/templates",
+	"languages": "languages"
 }
