@@ -35,7 +35,7 @@
   },
   "readmeFilename": "README.md",
   "nbbpm": {
-    "compatibility": "^1.17.0"
+    "compatibility": "^2.0.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"

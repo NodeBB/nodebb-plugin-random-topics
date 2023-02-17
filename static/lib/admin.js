@@ -1,6 +1,6 @@
 'use strict';
 
-define('admin/plugins/random-topics', ['settings'], function (settings) {
+define('admin/plugins/random-topics', ['settings', 'alerts'], function (settings, alerts) {
 	var ACP = {};
 
 	ACP.init = function () {
@@ -10,7 +10,7 @@ define('admin/plugins/random-topics', ['settings'], function (settings) {
 
 	function saveSettings() {
 		settings.save('random-topics', $('.random-topics-settings'), function () {
-			app.alert({
+			alerts.alert({
 				type: 'success',
 				title: 'Settings Saved',
 				message: 'Please reload your NodeBB to apply these settings',

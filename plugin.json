@@ -10,17 +10,9 @@
 			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
 		}
 	],
-	"staticDirs": {
-		"static": "./static"
-	},
-	"scripts": [
-
-	],
-	"acpScripts": [
-		"static/lib/admin.js"
-	],
 	"modules": {
-		"../client/random-topics.js": "./static/lib/random-topics.js"
+		"../client/random-topics.js": "./static/lib/random-topics.js",
+		"../admin/plugins/random-topics.js": "./static/lib/admin.js"
 	},
 	"templates": "static/templates",
 	"languages": "languages"
