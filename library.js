@@ -6,14 +6,14 @@ const controllers = require('./lib/controllers');
 const plugin = module.exports;
 
 plugin.init = async (params) => {
-	const { router, middleware/* , controllers */ } = params;
+	const { router, /* , controllers */ } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
 
 	const settings = await meta.settings.get('random-topics');
 	const route = `/${settings.route || 'random'}`;
-	routeHelpers.setupPageRoute(router, route, middleware, [], controllers.render);
+	routeHelpers.setupPageRoute(router, route, controllers.render);
 
-	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/random-topics', middleware, [], controllers.renderAdminPage);
+	routeHelpers.setupAdminPageRoute(router, '/admin/plugins/random-topics', controllers.renderAdminPage);
 };
 
 plugin.addAdminNavigation = (header) => {
