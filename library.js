@@ -6,7 +6,7 @@ const controllers = require('./lib/controllers');
 const plugin = module.exports;
 
 plugin.init = async (params) => {
-	const { router, /* , controllers */ } = params;
+	const { router } = params;
 	const routeHelpers = require.main.require('./src/routes/helpers');
 
 	const settings = await meta.settings.get('random-topics');

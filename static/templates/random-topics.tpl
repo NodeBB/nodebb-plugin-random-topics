@@ -23,7 +23,7 @@
 
 						<!-- only show login button if not logged in and doesn't have any posting privilege -->
 						{{{ if (!loggedIn && (!privileges.topics:create && !canPost))}}}
-						<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-sm btn-primary">[[category:guest-login-post]]</a>
+						<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-sm btn-primary">{{tx("category:guest-login-post")}}</a>
 						{{{ end }}}
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 
 		<div class="category">
 			{{{ if !topics.length }}}
-			<div class="alert alert-info" id="category-no-topics">[[recent:no-recent-topics]]</div>
+			<div class="alert alert-info" id="category-no-topics">{{tx("recent:no-recent-topics")}}</div>
 			{{{ end }}}
 
 			<!-- IMPORT partials/topics_list.tpl -->

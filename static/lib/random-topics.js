@@ -1,7 +1,7 @@
 'use strict';
 
 define('forum/random-topics', ['topicList'], function (topicList) {
-	var	module = {};
+	const module = {};
 
 	module.init = function () {
 		app.enterRoom('random-topics');

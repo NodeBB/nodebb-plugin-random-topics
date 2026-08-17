@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/NodeBB/nodebb-plugin-random-topics"
   },
+  "scripts": {
+    "lint": "eslint ."
+  },
   "keywords": [
     "nodebb",
     "plugin",
@@ -35,7 +38,7 @@
   },
   "readmeFilename": "README.md",
   "nbbpm": {
-    "compatibility": "^3.2.0"
+    "compatibility": "^4.14.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
@@ -43,9 +46,8 @@
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-angular": "13.1.0",
-    "eslint": "7.32.0",
-    "eslint-config-nodebb": "0.0.2",
-    "eslint-plugin-import": "2.24.2",
+    "eslint": "10.8.1",
+    "eslint-config-nodebb": "^2.0.3",
     "husky": "7.0.2",
     "lint-staged": "11.1.2"
   }

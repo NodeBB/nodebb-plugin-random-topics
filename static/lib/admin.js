@@ -1,7 +1,7 @@
 'use strict';
 
 define('admin/plugins/random-topics', ['settings', 'alerts'], function (settings, alerts) {
-	var ACP = {};
+	const ACP = {};
 
 	ACP.init = function () {
 		settings.load('random-topics', $('.random-topics-settings'));
